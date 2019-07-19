@@ -1,0 +1,25 @@
+{
+	"name": "DailyBackupDeletes",
+	"properties": {
+		"description": "cleanup of old backups",
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2019-04-11T00:15:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
